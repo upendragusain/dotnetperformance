@@ -2,7 +2,7 @@
 
 namespace App
 {
-    public class NameParser
+    public class WithStrings
     {
         public string GetLastName(string fullName)
         {

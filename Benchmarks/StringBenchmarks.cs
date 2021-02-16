@@ -7,7 +7,7 @@ namespace Benchmarks
     public class StringBenchmarks
     {
         private const string FullName = "Upendra Singh gusain";
-        private static readonly NameParser Parser = new NameParser();
+        private static readonly WithStrings Parser = new WithStrings();
 
         [Benchmark(Baseline = true)]
         public void GetLastName()
