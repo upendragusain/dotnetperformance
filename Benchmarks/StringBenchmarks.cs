@@ -14,5 +14,11 @@ namespace Benchmarks
         {
             Parser.GetLastName(FullName);
         }
+
+        [Benchmark]
+        public void GetLastNameUsingSubstring()
+        {
+            Parser.GetLastNameUsingSubstring(FullName);
+        }
     }
 }
