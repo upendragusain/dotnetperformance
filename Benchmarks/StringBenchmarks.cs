@@ -7,18 +7,24 @@ namespace Benchmarks
     public class StringBenchmarks
     {
         private const string FullName = "Upendra Singh gusain";
-        private static readonly WithStrings Parser = new WithStrings();
+        private static readonly JustStringThings justStringThings = new JustStringThings();
 
         [Benchmark(Baseline = true)]
         public void GetLastName()
         {
-            Parser.GetLastName(FullName);
+            justStringThings.GetLastName(FullName);
         }
 
         [Benchmark]
         public void GetLastNameUsingSubstring()
         {
-            Parser.GetLastNameUsingSubstring(FullName);
+            justStringThings.GetLastNameUsingSubstring(FullName);
+        }
+
+        [Benchmark]
+        public void GetLastNameWithSpan()
+        {
+            justStringThings.GetLastNameWithSpan(FullName);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace App
     {
         static void Main(string[] args)
         {
-            var nameParser = new WithStrings();
+            var nameParser = new JustStringThings();
             var lastname = nameParser.GetLastName("upendra singh gusain");
 
             Console.WriteLine(lastname);
